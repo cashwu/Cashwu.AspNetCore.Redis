@@ -4,7 +4,7 @@ using StackExchange.Redis.KeyspaceIsolation;
 
 namespace Cashwu.AspNetCore.Redis
 {
-    public sealed class RedisConnection
+    internal sealed class RedisConnection
     {
         private static readonly Lazy<RedisConnection> Lazy = new Lazy<RedisConnection>(() => new RedisConnection());
 
@@ -12,18 +12,13 @@ namespace Cashwu.AspNetCore.Redis
         private static ConfigurationOptions _redisConfigOptions;
         private static RedisConfig _config;
 
+        private static IDatabase _database;
+
         public static IDatabase Database
         {
             get
             {
-                var database = Connection?.GetDatabase(0);
-
-                if (!string.IsNullOrEmpty(_config.Prefix))
-                {
-                    database?.WithKeyPrefix(_config.Prefix);
-                }
-
-                return database;
+                return _database ??= Connection?.GetDatabase().WithKeyPrefix(_config.Prefix);
             }
         }
 

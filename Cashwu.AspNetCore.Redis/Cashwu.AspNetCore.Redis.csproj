@@ -7,7 +7,7 @@
         <PackageProjectUrl>https://github.com/cashwu/Cashwu.AspNetCore.Redis</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageDescription>Asp.Net Core redis client</PackageDescription>
-        <Version>1.0.0</Version>
+        <Version>1.0.2</Version>
         <Company>cashwu</Company>
         <AssemblyName>Cashwu.AspNetCore.Redis</AssemblyName>
         <RootNamespace>Cashwu.AspNetCore.Redis</RootNamespace>
