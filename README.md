@@ -1,5 +1,7 @@
 # Asp.Net Core redis client
 
+[![actions](https://github.com/cashwu/Cashwu.AspNetCore.Redis/workflows/.NET%20Core/badge.svg?branch=master)](https://github.com/cashwu/Cashwu.AspNetCore.Redis/actions)
+
 ---
 
 [![Nuget](https://img.shields.io/badge/Nuget-Cashwu.AspnetCore.Redis-blue.svg)](https://www.nuget.org/packages/Cashwu.AspnetCore.Redis)
